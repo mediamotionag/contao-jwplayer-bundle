@@ -2,7 +2,7 @@
   "name": "mediamotionag/contao-jwplayer-bundle",
   "homepage": "https://github.com/mediamotionag/contao-jwplayer-bundle",
   "description":"JWPlayer Video-Player",
-  "keywords":["contao", "contao4", "contao-bundle", "jwplayer", "video", "element"],
+  "keywords":["contao", "contao4", "contao-bundle", "jwplayer", "video", "element", "background", "fill"],
   "type": "contao-bundle",
   "license": "LGPL-3.0+",
   "authors": [
