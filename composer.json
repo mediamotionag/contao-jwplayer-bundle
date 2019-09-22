@@ -19,7 +19,8 @@
   },
   "require": {
     "php": ">=5.6.0",
-    "contao/core-bundle": "^4.4"
+    "contao/core-bundle": "^4.4",
+    "symfony/framework-bundle": "^3.3"
   },
   "require-dev": {
     "contao/manager-plugin": "^2.0"
@@ -27,9 +28,12 @@
   "conflict": {
     "contao/manager-plugin": "<2.0 || >=3.0"
   },
+  "extra": {
+    "contao-manager-plugin": "Memo\\JWPlayerBundle\\ContaoManager\\Plugin"
+  }
   "autoload": {
     "psr-4": {
-      "Memo\\ModJWPlayerBundle\\": "src/"
+      "Memo\\JWPlayerBundle\\": "src/"
     },
     "classmap": [
       "src/Resources/contao/"
@@ -40,8 +44,5 @@
       "src/Resources/contao/languages/",
       "src/Resources/contao/templates/"
     ]
-  },
-  "extra": {
-    "contao-manager-plugin": "Memo\\ModJWPlayerBundle\\ContaoManager\\Plugin"
   }
 }

@@ -9,15 +9,13 @@
 
 namespace Memo\JWPlayerBundle\ContaoManager;
 
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Memo\JWPlayerBundle\MemoJWPlayerBundle;
 
-/**
- * Plugin for the Contao Manager.
- *
- * @author Rory Zünd (Media Motion AG)
- */
+
 class Plugin implements BundlePluginInterface
 {
     /**
@@ -27,7 +25,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create('Memo\JWPlayerBundle\MemoJWPlayerBundle')
-                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle'])
+                ->setLoadAfter([[ContaoCoreBundle::class])
         ];
     }
 }
