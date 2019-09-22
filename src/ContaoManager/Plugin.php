@@ -25,7 +25,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create('Memo\JWPlayerBundle\MemoJWPlayerBundle')
-                ->setLoadAfter([[ContaoCoreBundle::class])
+                ->setLoadAfter([ContaoCoreBundle::class])
         ];
     }
 }
