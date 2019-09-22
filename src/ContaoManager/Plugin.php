@@ -7,7 +7,7 @@
  * @see	       https://github.com/mediamotionag/contao-jwplayer-bundle
  */
 
-namespace Memo\JWPlayerBundle\ContaoManager\ContaoManager;
+namespace Memo\JWPlayerBundle\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
