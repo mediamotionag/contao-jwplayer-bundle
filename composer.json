@@ -30,7 +30,7 @@
   },
   "extra": {
     "contao-manager-plugin": "Memo\\JWPlayerBundle\\ContaoManager\\Plugin"
-  }
+  },
   "autoload": {
     "psr-4": {
       "Memo\\JWPlayerBundle\\": "src/"
