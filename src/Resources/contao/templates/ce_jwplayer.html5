@@ -1,0 +1,51 @@
+<?php $this->extend('block_unsearchable'); ?>
+<?php $this->block('content'); ?>
+
+	<?php if(!$this->strError): ?>
+
+		<div class="jwplayer-wrapper jwplayer-<?= $this->id ?> loading video-mode-<?= $this->video_mode ?> <?= ($this->autostart) ? 'video-autostart' : '' ?>" id="video-<?= $this->id ?>">
+			<div id="jwplayer-<?= $this->id ?>" class="videoplayer" ></div>
+			
+			<script>
+				
+				var videoselector = "jwplayer-<?= $this->id ?>";
+				
+				//Initiate
+				jwplayer(videoselector).setup({
+					"playlist": "https://cdn.jwplayer.com/v2/media/<?= $this->video_id ?>",
+					stretching: '<?= $this->video_mode ?>',
+					repeat: <?= ($this->repeat) ? $this->repeat : 0 ?>,
+					autostart: <?= ($this->autostart) ? 'true' : 'false' ?>,
+					mute: <?= ($this->mute) ? $this->mute : 0 ?>,
+					controls: <?= ($this->controls) ? $this->controls : 0 ?>,
+				});
+				
+				//Hide Loading Animation for none Autoplay
+				<? if(!$this->autostart): ?>
+					$('#video-<?= $this->id ?>').removeClass('loading');
+				<?php endif; ?>
+				
+				//Loading Animation
+				jwplayer(videoselector).on('play', function(){
+					$('.' + videoselector).removeClass('loading');
+				});
+				
+				setTimeout(
+				function() 
+				{
+					$('.' + videoselector).removeClass('loading');
+				}, 4000);
+					
+			</script>
+			
+		</div>
+	
+	<?php else: ?>
+	
+		<p class="error">
+			<?= $this->strError ?>
+		</p>
+		
+	<?php endif; ?>
+	
+<?php $this->endblock(); ?>
