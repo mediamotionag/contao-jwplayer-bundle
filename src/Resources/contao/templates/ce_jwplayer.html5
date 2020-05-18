@@ -21,7 +21,7 @@
 				});
 				
 				//Hide Loading Animation for none Autoplay
-				<? if(!$this->autostart): ?>
+				<?php if(!$this->autostart): ?>
 					$('#video-<?= $this->id ?>').removeClass('loading');
 				<?php endif; ?>
 				
