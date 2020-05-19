@@ -1,3 +1,4 @@
+
 # Contao JWPlayer Bundle
 
 ## About
@@ -23,15 +24,25 @@ composer require mediamotionag/contao-jwplayer-bundle
 
 ## Options
 1. Anzeigemodus - mode the video is outputed in
-1.1 Füllen (Proportional & beschneiden) - to fill a container, without changing proportions, but cropping the video to make it fit
-1.2 Füllen (Verzerren & nicht beschneiden) - to fill a container, changing proportions, but not cropping the video
-1.3 Proportional (Schwarze Balken) - Video will be fit inside the container, the rest will be filled in black
-1.4 1:1 output of video size and proportion
+    1.Füllen (Proportional & beschneiden) - to fill a container, without changing proportions, but cropping the video to make it fit
+    2. Füllen (Verzerren & nicht beschneiden) - to fill a container, changing proportions, but not cropping the video
+    3. Proportional (Schwarze Balken) - Video will be fit inside the container, the rest will be filled in black
+    4. 1:1 output of video size and proportion
 2. Autostart - because modern browsers restrict this option, it mostly only works, with muted videos
 3. Stummschalten - mute video, mostly for autoplay videos (like background videos)
 4. Wiederholen - loop the video infinite
 5. Bedienelemente - show controls
 6. Player-ID überschreiben - if you want to use multiple videp-players (from jwplayer.com), you can overwrite the default player with this option
+
+## Screenshots (Backend)
+Backend Options (Contao Element)
+![enter image description here](https://raw.githubusercontent.com/mediamotionag/contao-jwplayer-bundle/master/Backend_1.png)
+
+Backend Video-Size Options
+![enter image description here](https://raw.githubusercontent.com/mediamotionag/contao-jwplayer-bundle/master/Backend_2.png)
+
+Frontend Example
+![enter image description here](https://raw.githubusercontent.com/mediamotionag/contao-jwplayer-bundle/master/Frontend.png)
 
 All API Options:
 https://developer.jwplayer.com/jw-player/docs/javascript-api-reference/
