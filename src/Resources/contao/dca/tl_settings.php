@@ -7,18 +7,16 @@
  * @see	       https://github.com/mediamotionag/contao-jwplayer-bundle
  */
 
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 /**
  * Edit palettes
  */
- 
-$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] = str_replace
-(
-    'lockPeriod',
-    'lockPeriod;{jwplayer_legend},default_player',
-    $GLOBALS['TL_DCA']['tl_settings']['palettes']['default']
-);
 
+PaletteManipulator::create()
+	->addLegend('jwplayer_legend', 'tl_settings', PaletteManipulator::POSITION_AFTER)
+	->addField('default_player', 'jwplayer_legend', PaletteManipulator::POSITION_APPEND)
+	->applyToPalette('default', 'tl_settings');
 
 /**
  * Add fields
