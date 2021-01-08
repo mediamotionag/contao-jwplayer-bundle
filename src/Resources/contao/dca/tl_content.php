@@ -6,14 +6,14 @@
  * @license    LGPL-3.0+
  * @see	       https://github.com/mediamotionag/contao-jwplayer-bundle
  */
-	
+
 
 /**
  * Edit palettes
  */
- 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'player_override'; 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['jw_player'] = '{type_legend},type,headline;{source_legend},video_id;{player_legend},video_mode,autostart,mute,repeat,controls,player_override;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'player_override';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['jw_player'] = '{type_legend},type,headline;{source_legend},video_id;{player_legend},video_mode,autostart,mute,repeat,controls,player_override;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['player_override'] = 'player_id';
 
 
